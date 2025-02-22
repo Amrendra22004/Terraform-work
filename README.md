@@ -36,3 +36,8 @@ sudo apt install terraform -y
 ```
 terraform -version
 ```
+
+![Screenshot from 2025-02-22 23-31-35](https://github.com/user-attachments/assets/8c69e374-5ac3-4f59-876a-5bb91735f32c)
+
+------------------------------------------------------------------------------------------------------
+
