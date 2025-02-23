@@ -40,29 +40,54 @@ terraform -version
 ![Screenshot from 2025-02-22 23-31-35](https://github.com/user-attachments/assets/8c69e374-5ac3-4f59-876a-5bb91735f32c)
 
 ------------------------------------------------------------------------------------------------------
+## AWS CLI installation 
+```
+sudo snap install aws-cli --classic
+```
+
+![Screenshot from 2025-02-23 22-15-44](https://github.com/user-attachments/assets/90e3e86a-68df-4a0b-b07a-1c1e38ef8bb4)
+-------------------------------------------------------------------------------------------------------
 
 ## AWS setup
 
 ### 1. IAM (Identify and Access management)
-** -> Go to user groups in IAM -> Create a User Group
+**-> Go to user groups in IAM -> Create a User Group
 
 ![Screenshot from 2025-02-23 21-09-51](https://github.com/user-attachments/assets/ec1a65ce-0d9e-45e1-b300-bf09938111a4)
 
-== Give it Above permissions ==
+==Give it Above permissions==
 
-** -> Create User
+**-> Create User
 
 ![Screenshot from 2025-02-23 21-13-52](https://github.com/user-attachments/assets/4067742d-24b5-4a48-a4d2-96689c740592)
 
-** -> Attach it with user Group of step 1
+**-> Attach it with user Group of step 1
 
 ![Screenshot from 2025-02-23 21-16-19](https://github.com/user-attachments/assets/d754ef20-24cd-4138-a9ea-d3c9ec03419e)
 
-** -> Create Access key
+**-> Create Access key
 
 ![Screenshot from 2025-02-23 21-18-51](https://github.com/user-attachments/assets/7aef27c1-8dd7-4685-8035-df9ca84868aa)
 
-** -> Select AWS CLI
+**-> Select AWS CLI
 
 ![Screenshot from 2025-02-23 21-20-46](https://github.com/user-attachments/assets/f816a6e3-7da8-47d7-858d-b5b517205d18)
+
+**-> so access key has been created now use this in AWS CLI
+
+![Screenshot from 2025-02-23 22-06-40](https://github.com/user-attachments/assets/8f0db02e-f610-4d9f-a6ec-abc216c79ef3)
+
+-----------------------------------------------------------------------------------------------------------------------
+## Configure AWS:
+```
+aws configure
+```
+-> Manually Adding AWS Credentials
+-
+```
+aws_access_key_id = YOUR_ACCESS_KEY
+aws_secret_access_key = YOUR_SECRET_KEY
+region = ap-south-1
+```
+
 
