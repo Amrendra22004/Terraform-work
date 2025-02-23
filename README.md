@@ -41,3 +41,28 @@ terraform -version
 
 ------------------------------------------------------------------------------------------------------
 
+## AWS setup
+
+### 1. IAM (Identify and Access management)
+** -> Go to user groups in IAM -> Create a User Group
+
+![Screenshot from 2025-02-23 21-09-51](https://github.com/user-attachments/assets/ec1a65ce-0d9e-45e1-b300-bf09938111a4)
+
+== Give it Above permissions ==
+
+** -> Create User
+
+![Screenshot from 2025-02-23 21-13-52](https://github.com/user-attachments/assets/4067742d-24b5-4a48-a4d2-96689c740592)
+
+** -> Attach it with user Group of step 1
+
+![Screenshot from 2025-02-23 21-16-19](https://github.com/user-attachments/assets/d754ef20-24cd-4138-a9ea-d3c9ec03419e)
+
+** -> Create Access key
+
+![Screenshot from 2025-02-23 21-18-51](https://github.com/user-attachments/assets/7aef27c1-8dd7-4685-8035-df9ca84868aa)
+
+** -> Select AWS CLI
+
+![Screenshot from 2025-02-23 21-20-46](https://github.com/user-attachments/assets/f816a6e3-7da8-47d7-858d-b5b517205d18)
+
