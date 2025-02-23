@@ -89,5 +89,75 @@ aws_access_key_id = YOUR_ACCESS_KEY
 aws_secret_access_key = YOUR_SECRET_KEY
 region = ap-south-1
 ```
+-> Writing the Terraform Configuration File
+-
+```
+mkdir terraform-ec2 && cd terraform-ec2
+```
+-> let's create a EC2 instance through code: - 
+Create a file named ***main.tf***, and add the following configuration:
+
+``` for example
+provider "aws" {
+    profile = "default"
+    region  = "ap-south-1"
+}
+
+resource "aws_instance" "UGO_Server" {
+    ami           = "ami-0cbf43fd299e3a464"
+    instance_type = "t2.micro"
+
+    tags = {
+        Name = "MyNCAAInstance"
+    }
+}
+```
+use command 
+```
+nano main.tf
+```
+![Screenshot from 2025-02-23 22-34-18](https://github.com/user-attachments/assets/4b7a10e5-b438-4a0c-922d-570bb3f57847)
+
+## Initializing and Applying Terraform
+
+we need to initialize Terraform first !!
+```
+terraform init
+```
+![Screenshot from 2025-02-23 22-39-18](https://github.com/user-attachments/assets/8082b54b-ba40-4c7e-b246-a19b1567455d)
+
+-> Check the Execution Plan
+by Running
+```
+terraform plan
+```
+![Screenshot from 2025-02-23 22-41-35](https://github.com/user-attachments/assets/bdb1203f-29d0-48b3-aa6b-ea4cf73e177e)
+
+-> Deploy your EC2 instance:
+```
+terraform apply -auto-approve
+```
+![Screenshot from 2025-02-23 22-43-57](https://github.com/user-attachments/assets/990b6d33-54b3-495b-a006-973f53028024)
+
+### In AWS console
+-> Instance has been created !!
+
+![Screenshot from 2025-02-23 22-47-23](https://github.com/user-attachments/assets/b5bec271-11ad-439b-a16c-95ab97a38b46)
+
+-> Now Destroying the Infrastructure
+```
+terraform destroy -auto-approve
+```
+![Screenshot from 2025-02-23 22-52-19](https://github.com/user-attachments/assets/4408b8ef-5cac-4959-a05e-65f5bf2eb52e)
+
+-> In AWS
+
+![Screenshot from 2025-02-23 22-52-38](https://github.com/user-attachments/assets/9882c5f6-7d32-47da-b2c3-a85c4954a0d3)
+
+
+
+
+
+
 
 
